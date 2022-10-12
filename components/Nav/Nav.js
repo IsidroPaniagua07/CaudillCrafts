@@ -28,6 +28,9 @@ const Nav = () => {
         <Link href="/cart">
           <a>Cart</a>
         </Link>
+        <Link href="/login">
+          <a>Login</a>
+        </Link>
       </div>
     </nav>
   );
