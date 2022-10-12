@@ -8,7 +8,7 @@ const index = () => {
           <div className="flex h-4/5 w-full flex-col justify-center items-center gap-2">
             <p className="flex flex-col text-2xl">Username: <input className="border-slate-400 border"/></p>
             <p className="flex flex-col text-2xl">Password: <input className="border-slate-400 border"/></p>
-            <button onClick={()=>{}} className='border border-black text-2xl rounded-sm bg-slate-500 text-white my-12'>Submit</button>
+            <button onClick={()=>{}} className='border border-black text-2xl rounded-sm bg-slate-500 text-white my-12 px-2 py-1'>Submit</button>
           </div>
         </div>
       </div>
