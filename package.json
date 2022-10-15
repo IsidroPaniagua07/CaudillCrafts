@@ -9,7 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "cookies-next": "^2.1.1",
     "dotenv": "^16.0.2",
+    "jsonwebtoken": "^8.5.1",
     "mongodb": "^4.9.1",
     "mongoose": "^6.5.4",
     "next": "12.2.5",
