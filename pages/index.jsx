@@ -5,17 +5,37 @@ import Card from "../components/Card/Card";
 
 export default function Home() {
   if (typeof window !== "undefined") {
-    // const [count, setCount] = useState(1);
-    // useEffect(() => {
-    //   setInterval(() => {
+
+
+    
+    // let count = 1
+    // const intervals = setInterval(() => {
+
     //     console.log(count);
     //     document.getElementById("radio" + count).checked = true;
     //     if (count === 3) {
-    //       setCount(1);
-    //     } else setCount((count) => count + 1);
-    //   }, 4000);
-    // }, []);
-  }
+    //       count=1
+    //     } else count++;
+    //   }, 2000);
+    //   const buttons = document.getElementsByClassName("manual-btn")
+    //   for(let i=0; i < buttons.length; i++) {
+    //       buttons[i].addEventListener("click", ()=>{
+    //         clearInterval(intervals)
+    //         const intervals = setInterval(() => {
+
+    //           console.log(count);
+    //           document.getElementById("radio" + count).checked = true;
+    //           if (count === 3) {
+    //             count=1
+    //           } else count++;
+    //         }, 2000);
+    //       })        
+    //     }
+        
+      }
+      
+  
+
 
   return (
     <>
@@ -24,34 +44,34 @@ export default function Home() {
           <h1 className="flex h-fit w-1/2 italic text-black justify-start items-center ">
             Caudill&apos;s Crafts.
           </h1>
-          <div className="slider ">
+          <div className="slider mr-20 overflow-hidden">
             <div className="slides">
-              {/* <input type="radio" name="radio-btn" id="radio1" />
+              <input type="radio" name="radio-btn" id="radio1" />
               <input type="radio" name="radio-btn" id="radio2" />
-              <input type="radio" name="radio-btn" id="radio3" /> */}
+              <input type="radio" name="radio-btn" id="radio3" />
               <div className="slide first">
           
-                <Card name="test" size="sm" url="/" />
-                {/* <Card name="test" size="sm" url="/" />
-              <Card name="test" size="sm" url="/" /> */}
+                <Card name="1" size="sm" url="/" />
+                <Card name="2" size="sm" url="/" />
+              <Card name="3" size="sm" url="/" />
               </div>
               <div className="slide">
          
-                {/* <Card name="test" size="sm" url="/" /> */}
-                {/* <Card name="test" size="sm" url="/" />
-              <Card name="test" size="sm" url="/" /> */}
+                <Card name="4" size="sm" url="/" />
+                <Card name="5" size="sm" url="/" />
+              <Card name="6" size="sm" url="/" />
               </div>
               <div className="slide">
       
-                {/* <Card name="test" size="sm" url="/" /> */}
-                {/* <Card name="test" size="sm" url="/" />
-              <Card name="test" size="sm" url="/" /> */}
+                <Card name="7" size="sm" url="/" />
+                <Card name="8" size="sm" url="/" />
+              <Card name="9" size="sm" url="/" />
               </div>
-              {/* <div className="manual-navigation">
-                <label htmlFor="radio1" className="manual-btn"></label>
-                <label htmlFor="radio2" className="manual-btn"></label>
-                <label htmlFor="radio3" className="manual-btn"></label>
-              </div> */}
+              <div className="manual-navigation">
+                <label htmlFor="radio1" className="manual-btn" id="manual-btn1"></label>
+                <label htmlFor="radio2" className="manual-btn" id="manual-btn2"></label>
+                <label htmlFor="radio3" className="manual-btn" id="manual-btn3"></label>
+              </div>
             </div>
           </div>
         </div>

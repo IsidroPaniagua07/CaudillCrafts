@@ -15,15 +15,23 @@
 }
 
 @layer utilities {
-  .login-gradient {background: rgb(239,239,240);
-background: linear-gradient(0deg, rgba(239,239,240,1) 0%, rgba(175,178,181,1) 100%);
+  .login-gradient {
+    background: rgb(239, 239, 240);
+    background: linear-gradient(
+      0deg,
+      rgba(239, 239, 240, 1) 0%,
+      rgba(175, 178, 181, 1) 100%
+    );
   }
   .card {
     box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.2);
     transition: 0.3s;
     border-radius: 5px;
-    height: 250px;
+    min-height: 250px;
+    height-height: 250px;
     width: 200px;
+    margin-left: 5px;
+    margin-right: 5px;
   }
   .card:hover {
     box-shadow: 0 12px 24px 5px rgba(0, 0, 0, 0.2);
@@ -31,39 +39,48 @@ background: linear-gradient(0deg, rgba(239,239,240,1) 0%, rgba(175,178,181,1) 10
   }
   .slider {
     background: white;
-    height: 250px;
-    width: 200px;
+    height: 260px;
+    width: 600px;
     display: flex;
     border-radius: 10px;
-    /* overflow: scroll; */
+    overflow: hidden;
+    align-items: center;
   }
   .slides {
     /* width:500%; */
     /* height: 500px; */
     display: flex;
+
     /* flex-direction: column; */
   }
   .slides input {
     display: none;
   }
   .slide {
-    width: 20%;
+    height: 250px;
+    width: 600px;
     margin-left: 0;
     transition: 2s;
+    display:flex;
+    flex-direction:row;
+ 
   }
   .slide img {
     height: 50%;
     width: 100%;
+
   }
 
   .manual-navigation {
     position: absolute;
     width: 800px;
     margin-top: -40px;
+    margin-left:-100px;
     display: flex;
     justify-content: center;
   }
   .manual-btn {
+
     border: 2px solid #40d3dc;
     padding: 5px;
     border-radius: 10px;
@@ -88,10 +105,10 @@ background: linear-gradient(0deg, rgba(239,239,240,1) 0%, rgba(175,178,181,1) 10
     margin-left: 0;
   }
   #radio2:checked ~ .first {
-    margin-left: -20%;
+    margin-left: -600px;
   }
   #radio3:checked ~ .first {
-    margin-left: -40%;
+    margin-left: -1200px;
   }
 
   .navigation-auto div {
@@ -103,13 +120,13 @@ background: linear-gradient(0deg, rgba(239,239,240,1) 0%, rgba(175,178,181,1) 10
   .navigation-auto div:not(:last-child) {
     margin-right: 40px;
   }
-  #radio1:checked ~ .manual-navigation .manual-btn1 {
+  #radio1:checked ~ .manual-navigation #manual-btn1 {
     background: #40d3dc !important;
   }
-  #radio2:checked ~ .manual-navigation .manual-btn2 {
+  #radio2:checked ~ .manual-navigation #manual-btn2 {
     background: #40d3dc !important;
   }
-  #radio3:checked ~ .auto-navigation .auto-btn3 {
+  #radio3:checked ~ .manual-navigation #manual-btn3 {
     background: #40d3dc;
   }
 }
@@ -129,4 +146,3 @@ a {
   text-decoration: none;
   font-weight: bold;
 }
-
