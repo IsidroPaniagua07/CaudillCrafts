@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useRouter } from "next/router";
 
-const index = () => {
+const Index = () => {
   const [username, setUsername] = useState("tasinxx");
   const [email, setEmail] = useState("tasinx@gmail.comzz");
   const [password, setPassword] = useState("admin");
@@ -82,4 +82,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Index;
