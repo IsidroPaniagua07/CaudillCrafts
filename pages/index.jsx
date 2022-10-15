@@ -6,8 +6,35 @@ import Card from "../components/Card/Card";
 export default function Home() {
   if (typeof window !== "undefined") {
 
+    var slides = document.querySelectorAll('.slide')
+    var btns = document.querySelectorAll('.btn')
 
+    var currentSlide = 1
+    console.log(btns)
+    console.log(slides)
+
+    const manualNav = (manual) => {
+      slides.forEach((slide) => {
+        slide.classList.remove('active')
+
+        btns.forEach((btn) => {
+          btn.classList.remove('active')
+      })
+
+      })
+
+      slides[manual].classList.add('active')
+      btns[manual].classList.add('active')
+    }
     
+    btns.forEach((btn, i) => {
+      btn.addEventListener('click', () => {
+        manualNav(i);
+        currentSlide = i
+      })
+    })
+
+
     // let count = 1
     // const intervals = setInterval(() => {
 
@@ -17,7 +44,7 @@ export default function Home() {
     //       count=1
     //     } else count++;
     //   }, 2000);
-    //   const buttons = document.getElementsByClassName("manual-btn")
+    //   const buttons = document.getElementsByClassName("btn")
     //   for(let i=0; i < buttons.length; i++) {
     //       buttons[i].addEventListener("click", ()=>{
     //         clearInterval(intervals)
@@ -44,12 +71,12 @@ export default function Home() {
           <h1 className="flex h-fit w-1/2 italic text-black justify-start items-center ">
             Caudill&apos;s Crafts.
           </h1>
-          <div className="slider mr-20 overflow-hidden">
-            <div className="slides">
-              <input type="radio" name="radio-btn" id="radio1" />
+          <div className="slider mr-20">
+            <div className="slides overflow-hidden">
+              <input type="radio" name="radio-btn" id="radio1" defaultChecked/>
               <input type="radio" name="radio-btn" id="radio2" />
               <input type="radio" name="radio-btn" id="radio3" />
-              <div className="slide first">
+              <div className="slide active">
           
                 <Card name="1" size="sm" url="/" />
                 <Card name="2" size="sm" url="/" />
@@ -68,9 +95,9 @@ export default function Home() {
               <Card name="9" size="sm" url="/" />
               </div>
               <div className="manual-navigation">
-                <label htmlFor="radio1" className="manual-btn" id="manual-btn1"></label>
-                <label htmlFor="radio2" className="manual-btn" id="manual-btn2"></label>
-                <label htmlFor="radio3" className="manual-btn" id="manual-btn3"></label>
+                <label htmlFor="radio1" className="btn" id="btn1" defaultChecked></label>
+                <label htmlFor="radio2" className="btn" id="btn2"></label>
+                <label htmlFor="radio3" className="btn" id="btn3"></label>
               </div>
             </div>
           </div>
